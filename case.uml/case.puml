@@ -1,6 +1,5 @@
 @startuml
 
-
 rectangle 信息管理模块{
     rectangle 管理车辆信息 as info1{
        usecase 基本信息
@@ -66,6 +65,45 @@ rectangle 车辆租赁模块{
     }
 }
 
+:用户: as user
+:后台管理人员: as manage
 
+left to right direction
+user --> 用户注册
+user --> 用户登录
+user --> 用户信息编辑
+user --> 托管租赁信息查看
+user --> lend1
+user --> lend2
+user --> lend3
+user --> 用户托管预约
+
+user --> 提交相关资料
+user --> 筛选所需车辆
+user --> 提交续租申请
+user --> 租赁活动优惠
+user --> 客户等级优惠
+user --> 租金计算器
+
+manage --> 托管租赁信息查看
+manage --> 后台查看查询
+manage --> 车况检验
+manage --> 提交电子版资料
+
+manage --> 处理预约申请
+manage --> 后台审查租赁资格
+manage --> borr21
+manage --> borr22
+manage --> borr23
+manage --> 续租审核
+manage --> 还车车况检验
+manage --> 费用结算
+manage --> 材料处理
+manage --> 资料存档
+manage --> 结束关系
+
+manage --> 租赁活动优惠
+manage --> 客户等级优惠
+manage --> 不良记录信息
 
 @enduml
