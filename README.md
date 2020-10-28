@@ -14,6 +14,16 @@
 
 
 
+- 确定分析设计方法：**面向对象**
+- 文档的规范形式：使用RUP模板**
+- 使用的工具：
+  - CM工具git、PM工具github、bug跟踪工具github
+  - 需求建模、设计工具：PlantUML
+  - 数据库设计工具：未定(PowerDesigner/ERWin)
+  - 原型开发工具：未定(MockPlus/Modao/JustInMind/AxurePro)
+
+
+
 
 
 ## 时间安排

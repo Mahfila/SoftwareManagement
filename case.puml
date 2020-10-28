@@ -1,0 +1,71 @@
+@startuml
+
+
+rectangle 信息管理模块{
+    rectangle 管理车辆信息 as info1{
+       usecase 基本信息
+       usecase 租赁费用
+       usecase 车辆费用
+    }
+    rectangle 管理用户信息 as info2{
+        usecase 用户注册
+        usecase 用户登录
+        usecase 用户信息编辑
+        usecase 托管租赁信息查看
+        usecase 后台查看查询
+    }
+}
+
+rectangle 托管业务模块{
+    rectangle 托管管理{
+        usecase 托管信息管理 as lend1
+        usecase 托管费用计算 as lend2
+        usecase 托管提醒 as lend3
+    }
+    rectangle 网上预约 as lend4{
+        usecase 用户托管预约
+    }
+    rectangle 线下验车 as lend5{
+        usecase 车况检验
+        usecase 提交电子版资料
+    }
+}
+
+rectangle 车辆租赁模块{
+    rectangle 线上预约 as borr1{
+        usecase 提交相关资料
+        usecase 筛选所需车辆
+        usecase 处理预约申请
+    }
+    rectangle 租赁资格审查 as borr7{
+        usecase 后台审查租赁资格
+    }
+    rectangle 线下提车 as borr2{
+        usecase 车况检验 as borr21
+        usecase 提交电子版资料 as borr22
+        usecase 确定租赁关系 as borr23
+    }
+    rectangle 续租 as borr3{
+        usecase 提交续租申请
+        usecase 续租审核
+    }
+    rectangle 还车 as borr4{
+        usecase 还车车况检验
+        usecase 费用结算
+        usecase 材料处理
+        usecase 资料存档
+        usecase 结束关系
+    }
+    rectangle 优惠活动 as borr5{
+        usecase 租赁活动优惠
+        usecase 客户等级优惠
+    }
+    rectangle 信息管理 as borr6{
+        usecase 租金计算器
+        usecase 不良记录信息
+    }
+}
+
+
+
+@enduml
